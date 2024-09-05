@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Wpf.RowCollSensetivity
 {
-    class CollIntensity
+    public class CollIntensity
     {
         public float[] Get(Mat mat)
         {

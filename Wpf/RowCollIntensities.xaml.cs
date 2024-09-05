@@ -88,8 +88,8 @@ namespace Wpf
 
             using var operated = new Mat(_operatedImagePath);
 
-            var rowsAnomalies = new AnomalyDetection().SpikeDetection(0.95f, new RowIntensity().Get(operated));
-            var collsAnomalies = new AnomalyDetection().SpikeDetection(0.95f, new CollIntensity().Get(operated));
+            var rowsAnomalies = new AnomalyDetection().ChangePointDetection(0.95f, new RowIntensity().Get(operated));
+            var collsAnomalies = new AnomalyDetection().ChangePointDetection(0.95f, new CollIntensity().Get(operated));
         
             _rowPlotModel.Series.Add(Actions.GetScatterSerie(rowsAnomalies));
             _collPlotModel.Series.Add(Actions.GetScatterSerie(collsAnomalies));
